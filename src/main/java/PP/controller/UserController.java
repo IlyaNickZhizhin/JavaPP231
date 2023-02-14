@@ -5,6 +5,7 @@ import PP.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -17,7 +18,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping("/")
+    @GetMapping("/")
     public String showAllEmployees(Model model) {
         List<User> allUsers = userService.getAllUsers();
         model.addAttribute("allUsers", allUsers);
@@ -45,7 +46,7 @@ public class UserController {
     }
 
     @RequestMapping("/deleteUser")
-    public String deleteUser(@RequestParam("userId") int id, Model model) {
+    public String deleteUser(@RequestParam("userId") int id) {
         userService.deleteUser(id);
         return "redirect:/";
     }
