@@ -1,4 +1,4 @@
-package PP.config;
+package pp.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 

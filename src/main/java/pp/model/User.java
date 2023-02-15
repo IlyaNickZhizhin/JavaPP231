@@ -1,4 +1,4 @@
-package PP.Model;
+package pp.model;
 
 import javax.persistence.*;
 

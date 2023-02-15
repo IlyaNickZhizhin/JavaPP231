@@ -1,7 +1,7 @@
-package PP.service;
+package pp.service;
 
-import PP.Model.User;
-import PP.dao.UserDAO;
+import pp.model.User;
+import pp.dao.UserDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,19 +21,17 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    @Transactional
     public void saveUser(User user) {
         userDAO.saveUser(user);
     }
 
     @Override
     @Transactional
-    public User getUSer(int id) {
+    public User getUser(int id) {
         return userDAO.getUser(id);
     }
 
     @Override
-    @Transactional
     public void deleteUser(int id) {
         userDAO.deleteUser(id);
     }

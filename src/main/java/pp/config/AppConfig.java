@@ -1,6 +1,5 @@
-package PP.config;
+package pp.config;
 
-import PP.Model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -22,7 +21,7 @@ import java.util.Properties;
 @Configuration
 @PropertySource("classpath:db.properties")
 @EnableTransactionManagement
-@ComponentScan(value = "PP")
+@ComponentScan(value = "pp")
 public class AppConfig {
 
 
@@ -60,7 +59,7 @@ public class AppConfig {
       props.put("hibernate.hbm2ddl.auto", env.getProperty("hibernate.hbm2ddl.auto"));
 
       factoryBean.setJpaProperties(props);
-      factoryBean.setPackagesToScan("PP.Model");
+      factoryBean.setPackagesToScan("pp.model");
 
       return factoryBean;
    }
