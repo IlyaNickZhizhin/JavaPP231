@@ -61,4 +61,14 @@ public class User {
         this.email = email;
     }
 
+    // toString() на русском
+    @Override
+    public String toString() {
+        return "Пользователь{" +
+                "id=" + id +
+                ", имя='" + name + '\'' +
+                ", фамилия='" + surname + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }

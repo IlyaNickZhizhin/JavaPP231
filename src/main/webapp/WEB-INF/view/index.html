@@ -1,0 +1,24 @@
+<!-- html страница, оформленная в шаблонизаторе Thymeleaf, которая загружается от controller.HalloController
+страницу и содержащая кнопку размером в 1/4 часть экрана "Ну что, погнали???" о начале работы приложения, на русском языке
+при нажатии на которую происходит переход на страницу с формой для ввода данных-->
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>3 недели тут</title>
+    </head>
+<body>
+<h1>НАКОНЕЦ ТО ПОЛУЧИЛОСЬ!!!!!</h1>
+<br>
+<form th:action="@{/start}" method="get">
+
+    <!-- Описание большой (на четверть экрана), круглой, выпуклой на 3 пикселя, расположенной
+     по центру экрана, на сером фоне, 50м шрифтом,
+      жирным, черного цвета внутри которой приветствие умещено в три строки-->
+    <button type="submit" style="width: 500px; height: 500px; border-radius: 500px; border: 5px
+    outset gray; font-size: 50px; font-weight: bold; color: black; background-color: burlywood;">
+        !!!!ЖМИ!!!!
+    </button>
+</form>

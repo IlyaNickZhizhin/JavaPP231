@@ -57,6 +57,9 @@ public class AppConfig {
       props.put("hibernate.dialect", env.getProperty("hibernate.dialect"));
       props.put("hibernate.show_sql", env.getProperty("hibernate.show_sql"));
       props.put("hibernate.hbm2ddl.auto", env.getProperty("hibernate.hbm2ddl.auto"));
+      /*добавляем hibernate.connection.useUnicode=true и hibernate.connection.characterEncoding=UTF-8*/
+      props.put("hibernate.connection.useUnicode", env.getProperty("hibernate.connection.useUnicode"));
+      props.put("hibernate.connection.characterEncoding", env.getProperty("hibernate.connection.characterEncoding"));
 
       factoryBean.setJpaProperties(props);
       factoryBean.setPackagesToScan("pp.model");
@@ -71,5 +74,4 @@ public class AppConfig {
 
       return transactionManager;
    }
-
 }
